@@ -1,0 +1,25 @@
+# Ignorar ambiente virtual
+venv/
+.env
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.sqlite3
+
+# Arquivos de log
+logs/
+*.log
+
+# Configurações do editor
+.vscode/
+.idea/
+*.swp
+
+# Dependências instaladas
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
