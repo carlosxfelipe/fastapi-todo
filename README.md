@@ -102,12 +102,38 @@ Agora, execute a aplicação com:
 docker run -p 8000:8000 task-api
 ```
 
+### Persistência do Banco de Dados
+
+Atualmente, seu banco de dados SQLite `(tasks.db)` está dentro do contêiner. Isso significa que, sempre que o contêiner for removido, os dados serão apagados.
+
+**📌 Solução: Usar um volume Docker para persistir o banco fora do contêiner.**
+
+Agora, ao rodar o contêiner, use:
+
+```json
+docker run -p 8000:8000 -v $(pwd)/tasks.db:/app/tasks.db task-api
+```
+
+Isso faz com que:
+
+- O arquivo `tasks.db` seja armazenado na máquina **fora do contêiner**.
+- Mesmo se o contêiner for removido, o banco continuará intacto.
+
 ## 🛠 Tecnologias utilizadas
+
+### 🔹 Backend
 
 - **[FastAPI](https://fastapi.tiangolo.com/)** - Framework rápido para APIs
 - **[Uvicorn](https://www.uvicorn.org/)** - Servidor ASGI para FastAPI
 - **[SQLModel](https://sqlmodel.tiangolo.com/)** - ORM leve baseado em SQLAlchemy e Pydantic
-- **SQLite** - Banco de dados embutido
+- **[SQLite](https://www.sqlite.org/)** - Banco de dados embutido
+- **[Docker](https://www.docker.com/)** - Containerização para facilitar a execução da aplicação
+
+### 🎨 Frontend
+
+- **HTML5** - Estrutura da aplicação
+- **CSS3** - Estilização e layout
+- **JavaScript (ES6+)** - Funcionalidade e interatividade
 
 ---
 
