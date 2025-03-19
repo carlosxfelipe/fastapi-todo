@@ -148,6 +148,10 @@ Isso torna a execução **ainda mais simples** e garante que o banco **continue 
 
 ### 🔹 Backend
 
+<p align="center">
+  <img src="./preview//back.png" alt="Preview do Back-end" />
+</p>
+
 - **[FastAPI](https://fastapi.tiangolo.com/)** - Framework rápido para APIs
 - **[Uvicorn](https://www.uvicorn.org/)** - Servidor ASGI para FastAPI
 - **[SQLModel](https://sqlmodel.tiangolo.com/)** - ORM leve baseado em SQLAlchemy e Pydantic
@@ -155,6 +159,10 @@ Isso torna a execução **ainda mais simples** e garante que o banco **continue 
 - **[Docker](https://www.docker.com/)** - Containerização para facilitar a execução da aplicação
 
 ### 🎨 Frontend
+
+<p align="center">
+  <img src="./preview/front.png" alt="Preview do Front-end" />
+</p>
 
 - **HTML5** - Estrutura da aplicação
 - **CSS3** - Estilização e layout
