@@ -32,3 +32,16 @@ button {
   background-color: #d9534f;
   color: white;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label,
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
