@@ -87,30 +87,31 @@ Este é um projeto simples de **gerenciador de tarefas** usando **FastAPI** e **
   }
   ```
 
-## 🐋 Construir a imagem Docker
+## 🐋 Rodando com Docker
 
-No terminal, dentro do diretório do projeto, execute:
+Para rodar o projeto via Docker, siga os passos abaixo:
 
-```json
+1. No terminal, dentro do diretório do projeto, execute:
+
+```sh
 docker build -t task-api .
-
 ```
 
-Agora, execute a aplicação com:
+2. Agora, execute a aplicação com:
 
-```json
+```sh
 docker run -p 8000:8000 task-api
 ```
 
 ### Persistência do Banco de Dados
 
-Atualmente, seu banco de dados SQLite `(tasks.db)` está dentro do contêiner. Isso significa que, sempre que o contêiner for removido, os dados serão apagados.
+Atualmente, seu banco de dados SQLite `tasks.db` está dentro do contêiner. Isso significa que, sempre que o contêiner for removido, os dados serão apagados.
 
 **📌 Solução: Usar um volume Docker para persistir o banco fora do contêiner.**
 
 Agora, ao rodar o contêiner, use:
 
-```json
+```sh
 docker run -p 8000:8000 -v $(pwd)/tasks.db:/app/tasks.db task-api
 ```
 
@@ -118,6 +119,30 @@ Isso faz com que:
 
 - O arquivo `tasks.db` seja armazenado na máquina **fora do contêiner**.
 - Mesmo se o contêiner for removido, o banco continuará intacto.
+
+### 📌 Rodando com Docker Compose (opcional)
+
+Se preferir, você pode rodar a aplicação usando `docker-compose`.  
+Para isso, crie um arquivo `docker-compose.yml` com o seguinte conteúdo:
+
+```yaml
+version: "3"
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./tasks.db:/app/tasks.db
+```
+
+Agora, basta rodar:
+
+```sh
+docker-compose up
+```
+
+Isso torna a execução **ainda mais simples** e garante que o banco **continue persistente** automaticamente.
 
 ## 🛠 Tecnologias utilizadas
 
