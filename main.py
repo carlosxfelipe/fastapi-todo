@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Depends
+from fastapi.middleware.cors import CORSMiddleware
 from sqlmodel import SQLModel, Field, Session, create_engine, select
 
 # Conexão com banco de dados SQLite
@@ -6,6 +7,15 @@ DATABASE_URL = "sqlite:///tasks.db"
 engine = create_engine(DATABASE_URL)
 
 app = FastAPI()
+
+# 🔥 Configuração do CORS 🔥
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Permite qualquer origem (para desenvolvimento)
+    allow_credentials=True,
+    allow_methods=["*"],  # Permite todos os métodos HTTP (GET, POST, PUT, DELETE, etc.)
+    allow_headers=["*"],  # Permite todos os cabeçalhos
+)
 
 
 # Modelo da Tarefa
