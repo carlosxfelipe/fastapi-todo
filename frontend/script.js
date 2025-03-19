@@ -70,7 +70,7 @@ document
     await fetch(API_URL + taskId, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: taskId, title, description }),
+      body: JSON.stringify({ title, description }),
     });
 
     window.location.href = "index.html";

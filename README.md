@@ -76,6 +76,26 @@ Este é um projeto simples de **gerenciador de tarefas** usando **FastAPI** e **
   }
   ```
 
+### 🔹 Editar uma tarefa
+
+- **Rota:** `PUT /tasks/{task_id}`
+- **Exemplo:** `PUT /tasks/1`
+- **Corpo da requisição (JSON):**
+  ```json
+  {
+    "title": "Título atualizado",
+    "description": "Descrição atualizada"
+  }
+  ```
+- **Resposta:**
+  ```json
+  {
+    "id": 1,
+    "title": "Título atualizado",
+    "description": "Descrição atualizada"
+  }
+  ```
+
 ### 🔹 Excluir uma tarefa
 
 - **Rota:** `DELETE /tasks/{task_id}`
@@ -149,7 +169,7 @@ Isso torna a execução **ainda mais simples** e garante que o banco **continue 
 ### 🔹 Backend
 
 <p align="center">
-  <img src="./preview//back.png" alt="Preview do Back-end" />
+  <img src="./preview/back.png" alt="Preview do Back-end" />
 </p>
 
 - **[FastAPI](https://fastapi.tiangolo.com/)** - Framework rápido para APIs
