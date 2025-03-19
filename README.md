@@ -125,7 +125,7 @@ docker run -p 8000:8000 task-api
 
 ### Persistência do Banco de Dados
 
-Atualmente, seu banco de dados SQLite `tasks.db` está dentro do contêiner. Isso significa que, sempre que o contêiner for removido, os dados serão apagados.
+Atualmente, o banco de dados SQLite `tasks.db` está dentro do contêiner. Isso significa que, sempre que o contêiner for removido, os dados serão apagados.
 
 **📌 Solução: Usar um volume Docker para persistir o banco fora do contêiner.**
 
