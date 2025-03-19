@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*.pyo
+tasks.db  # Evita copiar o banco de dados local

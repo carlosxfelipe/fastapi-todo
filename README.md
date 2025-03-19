@@ -87,6 +87,21 @@ Este é um projeto simples de **gerenciador de tarefas** usando **FastAPI** e **
   }
   ```
 
+## 🐋 Construir a imagem Docker
+
+No terminal, dentro do diretório do projeto, execute:
+
+```json
+docker build -t task-api .
+
+```
+
+Agora, execute a aplicação com:
+
+```json
+docker run -p 8000:8000 task-api
+```
+
 ## 🛠 Tecnologias utilizadas
 
 - **[FastAPI](https://fastapi.tiangolo.com/)** - Framework rápido para APIs
