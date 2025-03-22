@@ -1,4 +1,4 @@
-# FastAPI Task Manager
+# FastAPI ToDo List
 
 Este é um projeto simples de **gerenciador de tarefas** usando **FastAPI** e **SQLite**. Ele permite criar, listar e excluir tarefas por meio de uma API REST, garantindo **persistência de dados**.
 
